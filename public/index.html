@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+ 
+    <title>React-Prep-3</title>
+    <style>
+      .index{
+        padding: 0 8% 0 8%;
+      }
+      table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid grey;
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  
+}
+th{
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    </style>
+  </head>
+  <body style="background-color: #FFFFFF;">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="index">    <h1>Difference between Axios and fetch</h1>
+    <h4>Axios</h4>
+    <p>👉Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and responses and enables client-side protection against XSRF. It also has the ability to cancel requests. <br> EX:: axios.get('url') .then((response) => {</p>
+      <pre>		// Code for handling the response
+      })
+      .catch((error) => {
+      
+        // Code for handling the error
+      })</pre>
+      <h4>Fetch</h4>
+      <p>👉The Fetch API provides a fetch() method defined on the window object. It also provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (requests and responses). The fetch method has one mandatory argument- the URL of the resource to be fetched. This method returns a Promise that can be used to retrieve the response of the request. EX:: fetch('path-to-the-resource-to-be-fetched') .then((response) => {
+
+      </p>
+      <pre>	// Code for handling the response
+      })
+      .catch((error) => {
+      
+        // Code for handling the error
+      });</pre>
+      <table>
+        <tr>
+          <th>Axios</th>
+          <th>Fetch</th>
+        </tr>
+        <tr>
+          <td>Axios has url in request object.</td>
+          <td>	Fetch has no url in request object.</td>
+         
+        </tr>
+        <tr>
+          <td>Axios is a stand-alone third party package that can be easily installed.</td>
+          <td>Fetch is built into most modern browsers; no installation is required as such.</td>
+         
+        </tr>
+        <tr>
+          <td>Axios enjoys built-in XSRF protection.</td>
+          <td>Fetch does not.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios uses the data property.</td>
+          <td>Fetch uses the body property.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios’ data contains the object.</td>
+          <td>	Fetch’s body has to be stringified.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios request is ok when status is 200 and statusText is ‘OK’.</td>
+          <td>Fetch request is ok when response object contains the ok property.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios performs automatic transforms of JSON data.</td>
+          <td>Fetch is a two-step process when handling JSON data- first, to make the actual <br> request; second, to call the .json() method on the response.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios allows cancelling request and request timeout.</td>
+          <td>	Fetch does not.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios has the ability to intercept HTTP requests.</td>
+          <td>Fetch, by default, doesn’t provide a way to intercept requests.</td>
+          
+        </tr>
+        <tr>
+          <td>Axios has built-in support for download progress.</td>
+          <td>Fetch does not support upload progress.</td>
+          
+        </tr>
+      </table>
+      <br><br>
+        <h1>3What is useEffect Hook ?(Implementation)</h1>
+        <p>
+          useEffect :It allows us to implement all of the lifecycle hooks from within a single function API. // this will run when the component mounts and anytime the stateful data changes React.useEffect(() => { alert('Hey, Nads here!'); }); <br><br>
+
+        this will run, when the component is first initialized React.useEffect(() => { alert('Hey, Nads here!'); }, []);  <br><br>
+
+
+          this will run only when count state changes React.useEffect(() => { fetch('nads').then(() => setLoaded(true)); }, [count]); <br><br>
+
+          this will run when the component is destroyed or before the component is removed from UI. React.useEffect(() => { alert('Hey, Nads here'); return () => alert('Goodbye Component'); });
+        </p>
+       
+      </div>
+
+
+
+  </body>
+</html>
